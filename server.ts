@@ -19,7 +19,7 @@ app.use(express.static("public"));
 mongoose
   .connect(`${DB_URL}`)
   .then(() => console.log("Connected to Database"))
-  .catch((err) => console.error("Database connection error:", err));
+  .catch((err: any) => console.error("Database connection error:", err));
 
 // Route handlers
 app.use("/profile", require("./controllers/users"));
