@@ -14,10 +14,7 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, "public")));
 
-mongoose.connect(`${DB_URL}`, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-} as mongoose.ConnectOptions);
+mongoose.connect("mongodb://localhost/morse-master");
 
 app.use("/profile", require("./controllers/users"));
 app.use("/habit", require("./controllers/habits"));
