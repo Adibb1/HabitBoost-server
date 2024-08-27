@@ -251,4 +251,4 @@ router.put(
   }
 );
 
-export default router;
+module.exports = router;
