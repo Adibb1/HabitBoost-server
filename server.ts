@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, "public")));
 
-mongoose.connect(DB_URL || "mongodb://localhost/morse-master", {
+mongoose.connect(`${DB_URL}`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 } as mongoose.ConnectOptions);
