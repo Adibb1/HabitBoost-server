@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, "public")));
 
-mongoose.connect("mongodb://localhost/morse-master");
+mongoose.connect(`${DB_URL}`);
 
 app.use("/profile", require("./controllers/users"));
 app.use("/habit", require("./controllers/habits"));

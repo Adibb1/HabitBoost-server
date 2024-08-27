@@ -10,7 +10,7 @@
     "paths": {
       "*": ["node_modules/*"]
     },
-    "types": ["node"], // Ensure @types/node is installed
+    "types": ["node"],
     "outDir": "./dist"
   },
   "include": ["**/*.ts", "public/*"],
