@@ -10,6 +10,7 @@
     "paths": {
       "*": ["node_modules/*"]
     },
+    "types": ["node"],
     "outDir": "./dist"
   },
   "include": ["**/*.ts", "public/*"],
