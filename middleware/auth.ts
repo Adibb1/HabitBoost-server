@@ -5,7 +5,8 @@ import dotenv from "dotenv";
 dotenv.config();
 const { SECRET_KEY } = process.env;
 
-export interface AuthenticatedRequest extends Request {
+export interface AuthenticatedRequest<TBody = any, TParams = any, TQuery = any>
+  extends Request<TParams, any, TBody, TQuery> {
   user?: any;
 }
 

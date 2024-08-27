@@ -3,11 +3,12 @@
     "target": "ES2020",
     "module": "commonjs",
     "strict": true,
-    "esModuleInterop": true, // <-- Add or set this to true
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "rootDir": "./"
+    "rootDir": "./",
+    "typeRoots": ["./node_modules/@types", "./types"] //
   },
   "include": ["./**/*.ts"],
   "exclude": ["node_modules"]
