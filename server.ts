@@ -8,13 +8,13 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const { DB_URL } = process.env;
+// const { DB_URL } = process.env;
 
 app.use(express.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, "public")));
 
-mongoose.connect(`${DB_URL}`);
+mongoose.connect(`mongodb://localhost/morse-master`); ////////////////////////////
 
 app.use("/profile", require("./controllers/users"));
 app.use("/habit", require("./controllers/habits"));
